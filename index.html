@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Game (similar to rock paper scissors exercise)</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body style="background-color: black;">
+  
+<!-- <body style="background: url(data:image/jpeg;base64,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); 
+background-size: cover;"> -->
+ 
+  <h1>psychic game</h1>
+  <div>
+  <p class="title" id="titleID">
+    psychic game 2 <!-- made so that it can disappear with start button, using querySelector or getElementById-->
+  </p>
+  </div> <!-- this div isn't totall necessary, but it creates a space sometimes-->
+
+  <div class="container" id="name-box">
+    <p style="color: white;">what is your name?</p>
+    <input type="form">
+    <button>submit</button>
+  </div>
+
+  <div>
+    <button> toggle for red or blue </button> <!-- also look into youtube about best way to organize webpage with html -->
+  </div>
+
+</div class = "bigger-container" id="score-tracking-and-button"> 
+   <div class = "container" id="score-tracking"> <!-- what does container do here -->
+    <p id="directions-text">Select Start to play. Guess which letter the computer picks by pressing a, s, d, f or g! You have 5 guesses. If you get at least 3 you win! To restart game, press restart.</p>
+    <p id="userchoice-text"></p>
+    <p id="computerchoice-text"></p>
+    <p id="wins-text"></p> 
+    <p id="losses-text"></p>
+    <p id="guessesleft-text"></p>
+    <div class = "container" id="ContainerInContainer"> 
+    <p>last 3 scores</p>
+    <p id="1"> 1 </p> <!-- 4 + + + + + + + + + + + + + + + + + + -->
+    <p id="2"> 2 </p>
+    <p id="3"> 3 </p>
+    </div>
+  </div>
+
+
+
+  <div class="container" id = "GrayBarButtonRow"> <!-- the container here as a standard height and spans the page as a div from left to right. It appears to affect the location of the button along the horizontal access, and the color of the axis, but not what it does or the color of the button-->
+    <button class = "buttonClass" id="StartButtonInternalName">Start</button> <!-- the id allows the button to be connected to css and javascript, and edit the color of the button in css-->
+  </div>
+
+  <div class = "container" id = "nextAttemptRow">
+    <button class = "buttonClass" id = "nextAttemptButton" >Reset For Next Attempt</button> <!--style="display:none;"-->
+ </div>
+
+  <div class="container" id ="StartOverButtonRow">
+    <button class = "buttonClass" id ="StartOverButton" onClick="window.location.reload();">Start Over</button>
+  </div>
+
+  
+  </div>
+
+
+  <script type="text/javascript"> //What is the point of type? is it necessary? just for notes?
+  // BELOW WE HAVE THE VARIABLES
+    // Creates an internal array that lists out all of the options that the computer can choose
+    var computerChoices = ["a", "s", "d", "f", "g"];
+
+    // Creating variables to hold the number of wins, losses, and ties. They start at 0.
+    var wins = 0;
+    var losses = 0;
+    var guessesLeft = 5
+    var hiddenTotalGuesses = 15 // to make 3 levels
+    var hideSecondPsychic = document.querySelector("#titleID") // this can either be querySelector("#"), or getElementById(""). Works with css and start button function
+
+    // Create variables that hold references to the places in the HTML where we want to display things. So this basically converts div ids
+    // into variables so the variables can then be manipulated
+    var directionsText = document.getElementById("directions-text");
+    var userChoiceText = document.getElementById("userchoice-text");
+    var computerChoiceText = document.getElementById("computerchoice-text");
+    var winsText = document.getElementById("wins-text");
+    var lossesText = document.getElementById("losses-text");
+    var guessesLeftText = document.getElementById("guessesleft-text");
+    var StartButtonVariable = document.getElementById("StartButtonInternalName");
+    var grayBar = document.getElementById("GrayBarButtonRow");
+    var ContainerInContainerVariable = document.getElementById("ContainerInContainer"); // 1 + + + + + + + + PUT this is to make box appear after button click
+    var FirstScore = document.getElementById("1");
+    var nextAttemptButtonVariable = document.getElementById("nextAttemptButton"); // I think querySelector would work here to, you would just need to put ("#")
+
+    //BEFORE FUNCTION 
+    ContainerInContainerVariable.style.visibility = "hidden" // keeping the score box (the container inside the container) invisible until later
+    nextAttemptButtonVariable.style.visibility = "hidden"
+   
+    //FUNCTION 1 Start button that disappears when clicked
+    StartButtonVariable.onclick = function(EventButtonClick) { //references the button, and says onclick trigger this function
+      StartButtonVariable.style.visibility = "hidden"; //hides the button
+      grayBar.style.visibility = "hidden"; //hides the button bar
+      ContainerInContainerVariable.style.visibility = "" // 2 + + + + ++ + + + + + + + I guess this makes the box appear, which is what I wanted
+      directionsText.textContent = ""; // When event key happens above that causes the function to run, onkeyup, this makes the directions display nothing 
+      hideSecondPsychic.classList.add("hide"); // using the querySelector("#") above, and CSS, this makes the second title disappear with start button. 
+    }
+
+2
+   
+    //FUNCTION 2 This function says that if start button is clicked, user may choose from string of letters to try and match computer
+    
+      // Whenever the user presses a key. This is like an action that causes a function to take place when a key is lifted
+      document.onkeyup = function(event) {
+      
+      // This defines the key selected by the user (event.key) as the variable userGuess (this is a variable within the function, recorded by event.key)
+      // why does this variable have to be in the function, why can't it be above?
+          var userGuess = event.key.toLowerCase(); //this converts the letters to lower case, so if caps locks is on it still works
+
+      // This define the randomly chosen letter in the string as the variable computerGuess
+      // why does this variable have to be in the function, why can't it be above?
+          var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            // This says, if the start button is still there, then clear() or prevent the page from moving forward or doing anything
+            if (StartButtonVariable.style.visibility != "hidden"){
+              clear() // or could maybe use document.onkeyup = false
+            }
+            // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+            // Only run the following code block if the user presses a b c d e
+                
+            if ((userGuess === "a") || (userGuess === "s") || (userGuess === "d") || (userGuess==="f") || (userGuess==="g")) {
+                if (userGuess === computerGuess){
+                  wins++;
+                } else if (userGuess !== computerGuess) {
+                  losses++;
+                }
+
+                if (userGuess=userGuess){
+                    guessesLeft--;
+                    hiddenTotalGuesses--; // + + + + + + + + + +
+                }
+                
+                // ABC LEAVING OUT FOR NOW 
+                    //if (guessesLeft < 0) { //This stops the game after 0, but would be better if it stopped the game at 0.. WHY CAN'T GUESSES LEFT = 0?
+                    //clear()
+                    //}
+                // ABC LEAVING OUT FOR NOW 
+
+                // ABCD LEAVING OUT FOR NOW 
+                    // if (hiddenTotalGuesses === 10){
+                    //   document.onkeyup = false;
+                    // } else if ((hiddenTotalGuesses === 10) & (nextAttemptButtonVariable.style.visibility != "")){
+                    //   document.onkeyup = true;
+                    // };
+                // ABCD LEAVING OUT FOR NOW 
+                  
+                  // MAYBE MAYBE can do else if button clicked document.onkeyup = true
+                  //clear() // + + + + + OR MAYBE IF THIS EQUALS 10, THEN STOP KEYBOARD KEYS FROM WORKING.. AND THEN PRESSING BUTTON, WILL RESET NUMBERS AND START KEYS AGAIN. 
+                
+                // + + + + + + + + + + + maybe then display button that says attempt 2...  then put onlick set numbers to 0, and ifclicked or something then hide button.    
+              
+                
+                // the directionsText.textContent = "" was here, but I moved it lower
+
+      
+
+                if ((hiddenTotalGuesses === 10) & (wins > 1)){ //MAYBE MAYBE SWITCH THIS TO INTERNAL GUESSES (I DID)... IF = 10, AND THIS, UPDATE SCORE, IF = 5 UPDATE SECOND SCORE
+                setTimeout(function(){ alert("good job, at least 2 wins!"); }, 250);  // This is the same as a regular alert, but the way below makes it delayed by 250 milliseconds: https://www.w3schools.com/jsref/met_win_settimeout.asp
+                FirstScore.textContent = "win" //+ + + + + + + ++  ++ + + + 5 
+                }
+
+                else if ((hiddenTotalGuesses === 10) & (wins < 2)) {
+                setTimeout(function(){ alert("less than 2 wins, you are not psychic"); }, 250);    
+                FirstScore.textContent = "loss" //+ + + + + + + ++  ++ + + + 5 
+                }
+                
+                if ((hiddenTotalGuesses === 10) || (hiddenTotalGuesses === 5)) { //+ + + + + + + + + + +
+                  nextAttemptButtonVariable.style.visibility = ""
+                } 
+
+          
+
+                  //FUNCTION 3 Reset For Next Attempt Button
+                 nextAttemptButtonVariable.onclick = function(nextAttemptButtonClick) {        
+                          nextAttemptButtonVariable.style.visibility = "hidden";
+                          document.onkeyup = true;
+                          winsText.textContent = "wins: " + 0; // could also do winsText.innerHTML = "..."
+                          lossesText.textContent = "losses: " + 0;
+                          guessesLeftText.textContent = "guesses left: " + 5;
+                          // function(event) can we call the function again? to restart things?
+                         
+                        };
+
+              
+
+
+                // Display the user and computer guesses, and wins/losses/ties.THE ORANGE HERE IS WHAT IS DISPLAYED
+                userChoiceText.textContent = "Your choice: " + userGuess;
+                computerChoiceText.textContent = "Computer choice: " + computerGuess;
+                winsText.textContent = "wins: " + wins;
+                lossesText.textContent = "losses: " + losses;
+                guessesLeftText.textContent = "guesses left: " + guessesLeft;
+
+                console.log(hiddenTotalGuesses)
+                
+              }
+            };
+
+               
+                  
+
+
+  //               userChoiceText.textContent = "Your choice: " + userGuess;
+  //               computerChoiceText.textContent = "Computer choice: " + computerGuess;
+  //               winsText.textContent = "wins: " + wins;
+  //               lossesText.textContent = "losses: " + losses;
+  //               guessesLeftText.textContent = "guesses left: " + guessesLeft;
+  //   }
+  // };
+
+            // function scoreKeeper {
+            //   if 
+            // }
+
+  </script>
+
+</body>
+
+</html>
+
+<!--WHY DO WE WRITE IT LIKE the orange to the left: "wins-text" is not the inner html
+    it doesn't mean or show anything. But we made a variable equal to it. And we made that variable equal to words 
+    with the .textContext. which also takes into account the function output 
+
+    innerHTML returns HTML, as its name indicates. Sometimes people use innerHTML to retrieve or write text inside 
+    an element, but textContent has better performance because its value is not parsed as HTML. Moreover, 
+    using textContent can prevent XSS attacks-->
+
+<!--
+So we have a game, 
+the computer will guess a letter, so we need to create a limited range in regards to which letters it can guess
+how?
+- create an internal array of options for the computer. The range will need to be a variable, with a string of 
+different options in quotations to separate them
+- var potentialComputerChoices = ["a", "b", "c", "d", "e"];
+
+What will trigger the computer to choose a letter from the array of choices?
+- we could use a start button, that runs a function telling the computer to choose a letter
+- or the user guess can also act as a start button to have the computer guess, and the user guess
+
+The start button or user guess needs to be able to TELL the computer to run a guess. How will we tell the computer?
+- an onkeyup event for a start button or the user button
+
+We need something that will record if the user guess matches the computer guess,
+and if the computer guess does not match the user the guess
+- we run the function, using a random number generator, which draws from the list of computer options and we 
+say "if user guess = computer guess" then win++
+- else loss++
+- and if there is an "onkeyupEvent" then guessesleft-- (or if thats not an option (guessesleft++)*-1)
+
+Then we need to say if guessesleft = 0, then end game
+- how do we end the game, or end the function?
+- There should be a message that says game over as well
+- so if guessesLeft = 0 then hide everything and display message
+
+We also then need to keep track of the score internally, how?
+- This can be done with a variable
+
+how will we disply the results of each guess?
+- by making a paragraph line in html
+
+how will we make sure the paragraph line changes with the score?
+- we will need to make the paragrag line an "id or var" since id and var will create a placeholder 
+for a value that can change
+- so <p id="somesort of written changeable variable"
+
+How do we set that record display variable to change?
+- we need to make it connected to the function
+
+ALSO, WHAT IF THEY HAVE CAPS LOCKS ON.. WE WANT TO MAKE IT WORK WITH CAPTIAL LETTERS HOW?
+
+
+WHAT WE LEARN HERE:
+score that can change
+score keeping track
+centering words on webpage
+getElementByID: (is used almost every time we want to manipulate an element on our document.)
+textContent: textContent returns the text content of all elements, while innerText returns 
+the content of all elements, except for <script> and <style> elements.
+-->

@@ -1,0 +1,172 @@
+/*
+
+. references classes (will not work for IDs)
+# references IDs (will not work for classes)
+for h1 do not use a . or a #
+
+*/
+
+#body{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.hide {
+    display: none;
+  }
+
+.bold {
+    font-weight: bold;
+}  
+
+.title{
+    text-align: center;
+    color: blue;
+}
+
+/* the above is the same as the below essentially */
+
+#titleID {
+    text-align: center;
+}
+
+#name-box{
+    text-align: center;
+    border: 5px white;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto
+}
+
+#score-tracking-and-button{ 
+    text-align: right;
+}
+
+#score-tracking { 
+    height: 500px; /* size of container that will hold words */
+    width: 500px;
+    border: 5px solid lightblue; /* this is the border box */
+    text-align: center; /* this centers the text */
+    font-size: 15px; /* text size */
+    color: white; /* text color */
+    font-weight: bold; /* text weight */
+    margin: 0 auto /* This centers the container */
+}
+
+#ContainerInContainer {
+    height: 175px; 
+    width: 100px;
+    border: 5px solid lightblue; /* this is the border box */
+    /* position: fixed; /* 1 makes container move with the screen */
+    position: absolute; /* 2 makes container stay in same spot */
+    left: 50%; /* 2 keeps container center */
+    top: 60%; /* 3 keeps container center */
+    transform: translate(-50%, -50%); /* 4 keeps container center of screen, meaning if you scroll it will float, but also this sort of works: transform: translateX(-50%); */
+    /* margin: 0 auto /* This is one other option for a way to center the container */
+}
+
+
+/* START BUTTON */
+#StartButtonInternalName{ 
+    background-color: black;
+    color: rgb(228, 156, 156);
+    height: 50px; /* the gray bar will adjust to the size of the button, becuase it is a container */
+    width: 100px;
+}
+/* START BUTTON DIV ROW */
+#GrayBarButtonRow {
+    background-color: rgb(31, 30, 30);
+    text-align: center;
+}
+
+/* START OVER BUTTON */
+#StartOverButton {
+    top: 10px;
+    height: 50px; 
+    width: 100px;
+}
+
+/* START OVER BUTTON DIV ROW*/
+#StartOverButtonRow {
+    text-align: center;
+}
+
+/*  NEXT ATTEMPT BUTTON */
+#nextAttemptButton {
+    top: 10px;
+    height: 50px; 
+    width: 100px;
+}
+
+/* NEXT ATTEMPT BUTTON DIV ROW*/
+#nextAttemptRow {
+    text-align: center;
+}
+
+.buttonClass {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.buttonClass:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.buttonClass:active {
+    color: #000
+}
+
+.buttonClass:active:after {
+    background: transparent;
+}
+
+.buttonClass:hover:before {
+    opacity: 1;
+}
+
+.buttonClass:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+
